@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <style>
+      .vcenter {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+      }
+      #numerator {
+        border-bottom: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      </br>
+      </br>
+      </br>
+      <div class="row">
+        <div class="graph col-md-6">
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-3 vcenter">
+              <label for="x-val">X</label>
+              <input type="text" id="x-val"/>
+            </div>
+            <div class="col-md-1 vcenter"></div>
+            <div class="col-md-3 vcenter">
+              <label for="y-val">Y</label>
+              <input type="text" id="y-val"/>
+            </div>
+            <div class="col-md-1 vcenter"></div>
+            <div class="col-md-3 vcenter">
+              <button id="add-point">Add Point</button>
+            </div>
+          </div>
+          <br/>
+          <div class="row">
+            <div class="col-md-3">
+              <button id="group-1">Group 1 Points</button>
+            </div>
+            <div class="col-md-3">
+              <button id="group-2">Group 2 Points</button>
+            </div>
+            <div class="col-md-3">
+              <button id="group-3">Group 3 Points</button>
+            </div>
+          </div>
+          <br/>
+          <br/>
+          <div class="row">
+            <button id="run-calc">Run Calculations</button>
+          </div>
+          </br>
+          <div class="row">
+            <div class="col-md-1 text-center">
+              <div id="numerator" class="row">dy</div>
+              <div id="denominator" class="row">dx</div>
+            </div>
+            <div class="col-md-1 text-center">=</div>
+            <div id="slope-calc" class="col-md-5 text-center">
+              <div id="numerator" class="row">
+              </div>
+              <div id="denominator" class="row">
+              </div>
+            </div>
+            <div id="avg-slope-equals" class="col-md-1"></div>
+            <div id="slope-value" class="col-md-1 text-center">
+              <div id="numerator" class="row"></div>
+              <div id="denominator" class="row"></div>
+            </div>
+          </div>
+          </br>
+          <div class="row">
+            line function: y = mx + b
+          </div>
+          <div id="y-intercept" class="row">
+          </div>
+          </br>
+          </br>
+          Absolute Deviation: ∑ |y_i - avgSlope(x_i)|
+          <div class="row">
+            <div id="abs-deviation" class="col-md-5 text-center">
+              <div id="numerator" class="row"></div>
+              <div id="denominator" class="row"></div>
+            </div>
+            <div id="abs-deviation-equals" class="col-md-5 text-center">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./jquery.js"></script>
+  <script src="./d3.js"></script>
+  <script src="./graph.js"></script>
+  <script src="./stats.js"></script>
+<html/>
